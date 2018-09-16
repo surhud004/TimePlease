@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TimePlease</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    <!-- jQuery (Bootstrap JS plugins depend on it) -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+  </head>
+<body>
+
+  <audio id="session-beep" controls>
+    <source src="assets/rings.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <header>
+    <h1 class="text-center">TimePlease</h1>
+  </header>
+
+  <div id="main-content" class="container">
+    <div id="desc-div">
+      <p class="text-center">TimePlease - A countdown timer for short Breaks at Work based on <a target="_blank" href="https://en.wikipedia.org/wiki/Pomodoro_Technique"><strong>The Pomodoro Technique</strong></a>.</p>
+    </div>
+
+    <div id="input-div" class="input-group input-group-lg">
+      <div class="input-group-prepend">
+        <span id="input-label" class="input-group-text">Countdown Timer</span>
+      </div>
+      <input type="text" id="work-time" class="form-control" pattern="([1-9]|0[1-9]|[1-5][0-9]|60)" title="WorkTime Numbers only from 1 to 60" placeholder="Work Time in Minutes" maxlength="2" required>
+      <input type="text" id="break-time" class="form-control" pattern="([1-9]|0[1-9]|1[0-9]|20)" title="BreakTime Numbers only from 1 to 20" placeholder="Break Time in Minutes"maxlength="2" required>
+      <div class="input-group-append">
+        <button id="start-btn" class="btn btn-outline-success btn-lg">Start Countdown</button>
+      </div>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h2 id="timer-text" class="text-center">Today's Time :</h2>
+        <h3 class="text-center"><span id="time"></span></h3>
+      </div>
+    </div>
+
+  <div id="quote-Carousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <p class="quotes">&quot;To help have less stress, take time to relax.&quot; - Catherine Pulsifer</p>
+      </div>
+      <div class="carousel-item">
+        <p class="quotes">&quot;There is virtue in work and there is virtue in rest. Use both and overlook neither.&quot; - Alan Cohen</p>
+      </div>
+      <div class="carousel-item">
+        <p class="quotes">&quot;If you could relax for at least five minutes every hour, you'd be more productive.&quot; - Dr. Joyce Brothers</p>
+      </div>
+      <div class="carousel-item">
+        <p class="quotes">&quot;It’s important to have balance in your life between work and play.&quot; - Bobby Flay</p>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#quote-Carousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#quote-Carousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  </div>
+
+  <footer class="container-fluid text-center">
+    <p>Designed and Coded by : Ron004 &copy; 2018</p> <!-- Build Date : 11th Aug 2018 -->
+  </footer>
+
+
+  <script type="text/javascript">
+    function currentTime() {
+      var today = new Date().toLocaleTimeString('en-GB', { hour: "numeric", minute: "numeric"});
+      document.getElementById('time').innerHTML = today;
+      if(timerflag == 0)
+      {
+        t = setTimeout(function() {
+            currentTime()
+        }, 1000);
+      }
+    }
+    currentTime();
+  </script>
+</body>
+</html>

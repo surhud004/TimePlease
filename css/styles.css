@@ -1,0 +1,97 @@
+/*
+Design Colors @ Coolors.co -
+#05668D - Sea Blue
+#028090 - Metallic Seaweed
+#00A896 - Persian Green
+#02C39A - Caribbean Green
+#F0F3BD - Pale Spring Bud
+Fonts @ Google.com/Fonts -
+Oxygen, Teko, Courgette
+*/
+body {
+	font-family: 'Oxygen', sans-serif;
+	background-color: #F0F3BD;
+}
+/*HEADER*/
+audio {
+	display: none;
+}
+header {
+	background-color: #05668D;
+	padding: 20px;
+}
+header h1 {
+	color: #F0F3BD;
+}
+/*END OF HEADER*/
+
+/*MAIN CONTENT*/
+#desc-div {
+	background-color: #028090;
+	padding: 20px;
+	text-align: center;
+	font-size: 1.6vw;
+	color: #02C39A;
+}
+#desc-div a, #desc-div a:visited {
+	color: #02C39A;
+}
+#input-div {
+	background-color: #028090;
+	padding: 20px;
+}
+#input-label {
+	background-color: #00A896;
+	color: #F0F3BD;
+	border: 2px solid #00A896;
+}
+#work-time, #break-time {
+	background-color: #02C39A;
+	color: #F0F3BD;
+	border: 2px solid #02C39A;
+	opacity: 0.8;	
+}
+#start-btn {
+	color: #F0F3BD;
+}
+#start-btn:hover {
+	background-color: #00A896;
+	color: #F0F3BD;
+}
+.jumbotron {
+	background-color: #028090;
+	margin-bottom: 0px;
+	border: 2px solid #00A896;
+}
+#timer-text {
+	font-size: 4vw;
+	color: #02C39A;
+}
+#time {
+	font-family: 'Teko', sans-serif;
+	font-size: 16vw;
+	color: #F0F3BD; /*#02C39A;*/
+}
+#quote-Carousel {
+	background-color: #028090;
+	margin-top: 0px;
+	padding: 20px;
+	height: 360px;
+}
+.carousel-inner .quotes {
+	font-family: 'Courgette', cursive;
+	text-align: center;
+	font-style: italic;
+	font-size: 2vw;
+	padding: 100px;
+	color: #02C39A;
+}
+/*END OF MAIN CONTENT*/
+
+/*FOOTER*/
+footer {
+	background-color: #05668D;
+	padding: 10px;
+	color: #02C39A;
+}
+/*END OF FOOTER*/
